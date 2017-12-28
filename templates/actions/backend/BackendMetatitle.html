@@ -1,0 +1,39 @@
+<div class="dialog width550px height450px" id="metatitle-dlg">
+	<div class="dialog-background"></div>
+	<form method="post" action="?plugin=editor&action=editortitle">
+		<div class="dialog-window">
+			<div class="dialog-content">
+				<div class="dialog-content-indent">
+					<input name="type" type="hidden" value="metatitle">
+					<h2>Способ редактирования</h2>
+					<p><input name="addtitle" type="checkbox"> <span>дописать к сущетвующему шаблону</span></p>
+					<hr>
+					<h2>Шаблон</h2>
+					<label>
+						<textarea rows="3" cols="70" name="templ">($prod_name) | furfurshop</textarea>
+					</label>
+					<br><br>
+					<h2>Переменные</h2>
+					<p>
+						<strong>($prod_name)</strong> - название товара
+					</p>
+					<h2>Форматирование переменных</h2>
+					<p>
+						<input name="format" type="radio" value="firstbig"> каждое слово с заглавной<br>
+						<input name="format" type="radio" value="allbig"> все капсом<br>
+						<input name="format" type="radio" value="allsmall"> все прописными<br>
+						<input name="format" type="radio" value="nochange" checked> оставить без изменений
+					</p>					
+				</div>
+			</div>
+			<div class="dialog-buttons">
+				<div class="dialog-buttons-gradient">
+					<input type="submit" value="Поехали" class="button green">
+					<i class="icon16 loading" style="display: none;"></i> или <a
+						class="cancel" href="#">отмена</a>
+				</div>
+			</div>
+			{$wa->csrf()}
+		</div>
+	</form>
+</div>

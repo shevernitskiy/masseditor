@@ -1,0 +1,35 @@
+<div class="dialog width600px height450px" id="metadesc-dlg">
+	<div class="dialog-background"></div>
+	<form method="post" action="?plugin=editor&action=editordesc">
+		<div class="dialog-window">
+			<div class="dialog-content">
+				<div class="dialog-content-indent">
+					<input name="type" type="hidden" value="metadesc">
+					<h2>Способ редактирования</h2>
+					<p><input name="adddesc" type="checkbox"> <span>дописать к сущетвующему шаблону</span></p>
+					<hr>
+					<h2>Шаблон</h2>
+					<label>
+						<textarea rows="6" cols="75" name="templ">VEST-($prod_id)-($sku_name)</textarea>
+					</label>
+					<br>
+					<p><h2>Переменные</h2></p>
+					<p>
+						<strong>($prod_id)</strong> - id товара в БД<br>
+						<strong>($prod_name)</strong> - название товара<br>	
+						<strong>($sku_id)</strong> - id артикула товара<br>
+						<strong>($sku_name)</strong> - название артикула
+					</p>
+				</div>
+			</div>
+			<div class="dialog-buttons">
+				<div class="dialog-buttons-gradient">
+					<input type="submit" value="Поехали" class="button green">
+					<i class="icon16 loading" style="display: none;"></i> или <a
+						class="cancel" href="#">отмена</a>
+				</div>
+			</div>
+			{$wa->csrf()}
+		</div>
+	</form>
+</div>

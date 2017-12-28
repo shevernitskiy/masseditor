@@ -1,0 +1,23 @@
+<div id="delcat_error">
+	<form id='delcat_f_error' method="post" action="#">
+		<div class='dialog-content'>
+			<div id="del_info">
+				<table>
+					<tr>
+						<td><img
+							src="{$wa_app_static_url}plugins/delcat/img/error.png">
+						<td>
+							<ul>
+								{foreach $errors as $error} {foreach $error as $message}
+								<li>{$message|escape}</li> {/foreach} {/foreach}
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="dialog-buttons">
+			<input type="button" value="Закрыть" class="button blue cancel">
+		</div>
+	</form>
+</div>

@@ -1,0 +1,43 @@
+<div class="dialog width600px height550px" id="metakey-dlg">
+	<div class="dialog-background"></div>
+	<form method="post" action="?plugin=editor&action=editorkey">
+		<div class="dialog-window">
+			<div class="dialog-content">
+				<div class="dialog-content-indent">
+					<input name="type" type="hidden" value="metakey">
+					<h2>Способ редактирования</h2>
+					<p><input name="addkeys" type="checkbox"> <span>дописать к существующим ключам (если не отмечено, то произойдет перезапись)</span></p>
+					<hr>
+					<h2>Шаблон</h2>
+					<p><input name="addtempl" type="checkbox"> <span>добавить эти ключи</span></p>
+					<label>
+						<textarea rows="5" cols="75" name="templ">{freetempl}</textarea>
+					</label>
+					<p>
+						<strong>($prod_name)</strong> - название товара<br>	
+						* все буквы будут в нижнем регистре
+					</p>
+					<hr>
+					<h2>Ключи по цветам</h2>
+					<p><input name="addcolor" type="checkbox"> <span>добавить ключи с цветами</span></p>
+					<label>
+						<input name="colortempl" type="text" size="75" value="($prod_name) ($color)">
+					</label>
+					<p>
+						<strong>($prod_name)</strong> - название товара<br>
+						<strong>($color)</strong> - цвет<br>		
+						* все буквы будут в нижнем регистре
+					</p>
+				</div>
+			</div>
+			<div class="dialog-buttons">
+				<div class="dialog-buttons-gradient">
+					<input type="submit" value="Поехали" class="button green">
+					<i class="icon16 loading" style="display: none;"></i> или <a
+						class="cancel" href="#">отмена</a>
+				</div>
+			</div>
+			{$wa->csrf()}
+		</div>
+	</form>
+</div>

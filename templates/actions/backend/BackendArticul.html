@@ -1,0 +1,35 @@
+<div class="dialog width500px height350px" id="articul-dlg">
+	<div class="dialog-background"></div>
+	<form method="post" action="?plugin=editor&action=editorart">
+		<div class="dialog-window">
+			<div class="dialog-content">
+				<div class="dialog-content-indent">
+					<h2>Введите шаблон артикула</h2>
+					<br>
+					<input name="type" type="hidden" value="articul">
+					<label>
+						<textarea rows="3" cols="60" name="templ" value="{$templ}">VEST-($prod_id)-($sku_name)</textarea>
+					</label>
+					<br>
+					<p><h2>Переменные</h2></p>
+					<p>
+						<strong>($prod_id)</strong> - id товара в БД<br>
+						<strong>($prod_name)</strong> - название товара<br>	
+						<strong>($sku_id)</strong> - id артикула товара<br>
+						<strong>($sku_name)</strong> - название артикула<br>
+						<i>* Пробелы в названиях заменяются на "-"<br>
+						* Символы кроме букв и цифр удаляются</i>
+					</p>
+				</div>
+			</div>
+			<div class="dialog-buttons">
+				<div class="dialog-buttons-gradient">
+					<input type="submit" value="Поехали" class="button green">
+					<i class="icon16 loading" style="display: none;"></i> или <a
+						class="cancel" href="#">отмена</a>
+				</div>
+			</div>
+			{$wa->csrf()}
+		</div>
+	</form>
+</div>
