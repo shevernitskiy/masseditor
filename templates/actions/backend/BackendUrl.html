@@ -1,0 +1,21 @@
+<div class="dialog width550px height450px" id="url-dlg">
+	<div class="dialog-background"></div>
+	<form method="post" action="?plugin=editor&action=editorurl">
+		<div class="dialog-window">
+			<div class="dialog-content">
+				<div class="dialog-content-indent">
+					<input name="type" type="hidden" value="url">
+					<h2>Тут может быть будут доп функции</h2>
+				</div>
+			</div>
+			<div class="dialog-buttons">
+				<div class="dialog-buttons-gradient">
+					<input type="submit" value="Поехали" class="button green">
+					<i class="icon16 loading" style="display: none;"></i> или <a
+						class="cancel" href="#">отмена</a>
+				</div>
+			</div>
+			{$wa->csrf()}
+		</div>
+	</form>
+</div>
